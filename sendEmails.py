@@ -3,7 +3,7 @@ from email.message import Message
 from email.header import Header
 
 server = smtplib.SMTP('smtp.gmail.com', 587)
-myEmail = "kyle.erin.phillips@gmail.com"
+myEmail = "your_email@gmail.com"
 
 # Emails
 emailFile = open("emails.txt")
@@ -19,11 +19,9 @@ server.ehlo()
 server.starttls()
 server.ehlo()
 
-server.login("kyle.erin.phillips", "muffins29")
+server.login("your_email_wo_domain", "your_password")
 
-msgString = "Hello,\nI'm with a group of working professionals that carpool to Microsoft and we're looking" \
-            " for a place near work. Is this property still available? Also, if first+last+security deposit is needed, " \
-            "is it possible to pay some of that over an extended period of time?\n\nThanks!"
+msgString = "Put your email message here."
 
 for x in range(0, len(emails)):
     msg = Message()
